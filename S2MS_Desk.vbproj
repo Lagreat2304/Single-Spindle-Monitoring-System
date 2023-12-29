@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D03F283B-14D9-4390-8F84-0178AFEB922D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>S2MS_Desk.My.MyApplication</StartupObject>
+    <RootNamespace>S2MS_Desk</RootNamespace>
+    <AssemblyName>S2MS_Desk</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>S2MS_Desk.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>S2MS_Desk.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>s2ms.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1DataExtender.2, Version=2.0.20113.81, Culture=neutral, PublicKeyToken=7c4b5683f80b910e, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.C1Command.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1FlexGrid.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=79882d576c6336da" />
+    <Reference Include="C1.Win.C1FlexGrid.Classic.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Input.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a" />
+    <Reference Include="C1.Win.C1Report.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Sizer.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1TrueDBGrid.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.TreeView.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminClass\ClassMain.vb" />
+    <Compile Include="AdminPage\FormChangePassword.Designer.vb">
+      <DependentUpon>FormChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\FormChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\FormCompany.Designer.vb">
+      <DependentUpon>FormCompany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\FormCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\FormLocation.Designer.vb">
+      <DependentUpon>FormLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\FormLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\FormMain.Designer.vb">
+      <DependentUpon>FormMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\FormMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\FormRepView.Designer.vb">
+      <DependentUpon>FormRepView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\FormRepView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\FormSearch.Designer.vb">
+      <DependentUpon>FormSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\FormSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\FormUser.Designer.vb">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\FormUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterClass\ClassPayTerm.vb" />
+    <Compile Include="MasterPage\FormCount.Designer.vb">
+      <DependentUpon>FormCount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\FormCount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterPage\FormMachine.Designer.vb">
+      <DependentUpon>FormMachine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\FormMachine.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterPage\FormShift.Designer.vb">
+      <DependentUpon>FormShift.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\FormShift.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterPage\FormStoppage.Designer.vb">
+      <DependentUpon>FormStoppage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\FormStoppage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ClassInputBox.vb" />
+    <Compile Include="Modules\ModuleCommonFunction.vb" />
+    <Compile Include="Modules\ModuleDBConnection.vb" />
+    <Compile Include="Modules\ModuleSecurity.vb" />
+    <Compile Include="Modules\ModuleVariables.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReportPage\FormBarcodeLabel.Designer.vb">
+      <DependentUpon>FormBarcodeLabel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPage\FormBarcodeLabel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPage\FormSpinningReport.Designer.vb">
+      <DependentUpon>FormSpinningReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPage\FormSpinningReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPage\FormStockSummary.Designer.vb">
+      <DependentUpon>FormStockSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPage\FormStockSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminClass\ClassLocation.vb" />
+    <Compile Include="TransactionPage\FormSpindleView.Designer.vb">
+      <DependentUpon>FormSpindleView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionPage\FormSpindleView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminPage\FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\FormCompany.resx">
+      <DependentUpon>FormCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\FormLocation.resx">
+      <DependentUpon>FormLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\FormMain.resx">
+      <DependentUpon>FormMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\FormRepView.resx">
+      <DependentUpon>FormRepView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\FormSearch.resx">
+      <DependentUpon>FormSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\FormUser.resx">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPage\FormCount.resx">
+      <DependentUpon>FormCount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPage\FormMachine.resx">
+      <DependentUpon>FormMachine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPage\FormShift.resx">
+      <DependentUpon>FormShift.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPage\FormStoppage.resx">
+      <DependentUpon>FormStoppage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPage\FormBarcodeLabel.resx">
+      <DependentUpon>FormBarcodeLabel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPage\FormSpinningReport.resx">
+      <DependentUpon>FormSpinningReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPage\FormStockSummary.resx">
+      <DependentUpon>FormStockSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionPage\FormSpindleView.resx">
+      <DependentUpon>FormSpindleView.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_logo-removebg-preview.png" />
+    <None Include="Resources\main_logo.png" />
+    <None Include="Resources\indi.png" />
+    <None Include="Resources\table2.jpg" />
+    <None Include="Resources\maha58.jpg" />
+    <None Include="Resources\spinning-img6-1024x409-1.jpg" />
+    <None Include="Resources\_IMG1399.jpg" />
+    <None Include="Images\machine-learning.png" />
+    <None Include="Images\iot.png" />
+    <None Include="Images\machine-learning-new.png" />
+    <None Include="Images\machine-learning-50.png" />
+    <None Include="Images\send-new.png" />
+    <None Include="Images\deep-learning.png" />
+    <None Include="Images\deep-learning-32.png" />
+    <None Include="Images\send-32.png" />
+    <None Include="Images\send-32-new.png" />
+    <None Include="Images\receive-32-new.png" />
+    <None Include="Images\minimize.png" />
+    <Content Include="s2ms.ico" />
+    <None Include="Images\inventory2.png" />
+    <None Include="Images\inventory1.png" />
+    <None Include="Images\inventory.png" />
+    <None Include="Images\search.png" />
+    <None Include="Images\print.png" />
+    <None Include="Images\ok.png" />
+    <None Include="Images\oc_logo_white.png" />
+    <None Include="Images\oc_logo_icon_1.png" />
+    <None Include="Images\oc_logo_icon.png" />
+    <None Include="Images\oc_logo_color.png" />
+    <None Include="Images\oc_logo_black.png" />
+    <None Include="Images\jm_comp_logo.jpeg" />
+    <None Include="Images\exit.png" />
+    <None Include="Images\close.png" />
+    <None Include="Images\clear.png" />
+    <None Include="Images\bg.jpg" />
+    <None Include="Images\atv_comp_logo.png" />
+    <None Include="Images\oc_logo_color_t.png" />
+    <None Include="Images\admin.png" />
+    <None Include="Images\master.png" />
+    <None Include="Images\transaction.png" />
+    <None Include="Images\master_1.png" />
+    <None Include="Images\transaction_1.png" />
+    <None Include="Images\reports.png" />
+    <None Include="Images\exit_1.png" />
+    <None Include="Images\exit_2.png" />
+    <None Include="Images\admin_1.png" />
+    <None Include="Images\master_2.png" />
+    <None Include="Images\admin_2.png" />
+    <None Include="Images\master_3.png" />
+    <None Include="Images\transaction_3.png" />
+    <None Include="Images\reports_2.png" />
+    <None Include="Images\exit_4.png" />
+    <None Include="Images\save.png" />
+    <None Include="Images\reset.png" />
+    <None Include="Images\erase.png" />
+    <None Include="Images\main_close.png" />
+    <None Include="Images\bg_1.png" />
+    <None Include="Images\ok_1.png" />
+    <None Include="Images\ok_2.png" />
+    <None Include="Images\ok_3.png" />
+    <None Include="Images\exit_5.png" />
+    <None Include="Images\save_blue.png" />
+    <None Include="Images\reset_blue.png" />
+    <None Include="Images\save_blue_1.png" />
+    <None Include="Images\clear_blue.png" />
+    <None Include="Images\close_blue.png" />
+    <None Include="Images\search_blue.png" />
+    <None Include="Images\search_blue_1.png" />
+    <None Include="Images\search_blue_2.png" />
+    <None Include="Images\mail_send_blue.png" />
+    <None Include="Images\change_password_blue.png" />
+    <None Include="Images\print_blue.png" />
+    <None Include="Images\save_red.png" />
+    <None Include="Images\add_blue.png" />
+    <Content Include="Images\ABN_Sign.jpg" />
+    <None Include="Images\apply_green.png" />
+    <None Include="Images\add_document_icon.png" />
+    <None Include="Images\add_box_icon.png" />
+    <Content Include="Images\barcode_blue.png" />
+    <None Include="Images\bar_barcode_code_commerce_icon.png" />
+    <None Include="Images\barcode_box_line_icon.png" />
+    <Content Include="Images\close_1.png" />
+    <None Include="Images\excel.png" />
+    <None Include="Images\edit-list-order-icon.png" />
+    <None Include="Images\edit-list-order-rtl-icon.png" />
+    <None Include="Images\email_letter_mail_message_icon.png" />
+    <None Include="Images\excel_icon.png" />
+    <Content Include="Images\exit_3.png" />
+    <None Include="Images\file_excel_icon.png" />
+    <Content Include="Images\JM_Sign.jpg" />
+    <None Include="Images\login_page_design_1.png" />
+    <None Include="Images\login_page_design_2.png" />
+    <Content Include="Images\logout.png" />
+    <None Include="Images\magnify_search_zoom_icon.png" />
+    <Content Include="Images\menu_admin.png" />
+    <Content Include="Images\menu_asset.png" />
+    <Content Include="Images\menu_master.png" />
+    <Content Include="Images\menu_purchase.png" />
+    <Content Include="Images\menu_report.png" />
+    <Content Include="Images\menu_warehouse.png" />
+    <None Include="Images\note_add_ic_icon.png" />
+    <Content Include="Images\oc_logo_icon_1.ico" />
+    <None Include="Images\pr_img_1.jpg" />
+    <None Include="Images\profile_edit_user_icon.png" />
+    <Content Include="Images\reports_1.png" />
+    <Content Include="Images\report_blue.png" />
+    <Content Include="Images\report_blue_1.png" />
+    <None Include="Images\strength_ver_1.jpg" />
+    <None Include="Images\save_fill_data_icon.png" />
+    <Content Include="Images\transaction_2.png" />
+    <Content Include="Images\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ReportClass\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
